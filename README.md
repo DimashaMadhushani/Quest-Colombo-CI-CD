@@ -30,7 +30,7 @@ This repository contains the Jenkins CI/CD pipeline configuration for the Quest 
    - Run: `php artisan migrate` to auto-create all necessary tables
 
 
-## 🔧 Pipeline Stages
+##  Pipeline Stages
 
 1. ✅ Clone Frontend & Backend
 2. ✅ Install npm dependencies
@@ -41,14 +41,23 @@ This repository contains the Jenkins CI/CD pipeline configuration for the Quest 
 7. ✅ Run Jenkins Pipeline
 
 
-## 📂 Project Repos
+##  Project Repos
 
 - 🔗 [Frontend](https://github.com/DimashaMadhushani/Quest-Colombo-Frontend)
 - 🔗 [Backend](https://github.com/DimashaMadhushani/Quest-Colombo-API)
 - 🔗 [CI/CD Jenkinsfile](https://github.com/DimashaMadhushani/Quest-Colombo-CI-CD)
+  
+
+##  Challenges & Fixes
+
+⚙️ NodeJS auto-install failed in Jenkins → Installed manually & set path
+⚙️ Missing SVG during frontend build → Removed broken image import
+⚙️ start command failed on Linux → Replaced with nohup node index.js &
+⚙️ Git push conflicts → Resolved with --allow-unrelated-histories
+⚙️ Duplicate stages {} block → Merged all stages under one block
 
 
-## 🧪 How to Replicate
+##  How to Replicate
 
 ```bash
 git clone https://github.com/DimashaMadhushani/Quest-Colombo-CI-CD.git
