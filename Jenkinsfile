@@ -1,15 +1,8 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello from Jenkins!'
-            }
-        }
-    }
     tools {
-        nodejs 'NodeJS'
+        nodejs 'NodeJS'  // Make sure this matches Global Tool name
     }
 
     environment {
@@ -17,11 +10,16 @@ pipeline {
     }
 
     stages {
-        stage('Clone Frontend and Backend') {
+        stage('Clone Frontend') {
             steps {
                 dir('frontend') {
                     git url: 'https://github.com/DimashaMadhushani/Quest-Colombo-Frontend.git', branch: 'main'
                 }
+            }
+        }
+
+        stage('Clone Backend') {
+            steps {
                 dir('backend') {
                     git url: 'https://github.com/DimashaMadhushani/Quest-Colombo-API.git', branch: 'main'
                 }
@@ -68,17 +66,17 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo '🎯 Deploy your app here (Docker, Render, AWS, etc.)'
+                echo '🚀 Add deployment steps here if needed.'
             }
         }
     }
 
     post {
         success {
-            echo '✅ Build and Deploy Successful!'
+            echo '✅ CI/CD Pipeline finished successfully!'
         }
         failure {
-            echo '❌ Build Failed. Check logs.'
+            echo '❌ CI/CD Pipeline failed. Check logs above.'
         }
     }
 }
