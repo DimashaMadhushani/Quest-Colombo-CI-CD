@@ -59,7 +59,7 @@ pipeline {
         stage('Start Backend') {
             steps {
                 dir('backend') {
-                    sh 'start /B node index.js'
+                    sh 'nohup node index.js > backend.log 2>&1 &'
                 }
             }
         }
