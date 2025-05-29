@@ -29,10 +29,10 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 dir('frontend') {
-                    bat 'npm install'
+                    sh 'npm install'
                 }
                 dir('backend') {
-                    bat 'npm install'
+                    sh 'npm install'
                 }
             }
         }
@@ -40,10 +40,10 @@ pipeline {
         stage('Run Tests') {
             steps {
                 dir('frontend') {
-                    bat 'npm test || echo "No frontend tests"'
+                    sh 'npm test || echo "No frontend tests"'
                 }
                 dir('backend') {
-                    bat 'npm test || echo "No backend tests"'
+                    sh 'npm test || echo "No backend tests"'
                 }
             }
         }
@@ -51,7 +51,7 @@ pipeline {
         stage('Build Frontend') {
             steps {
                 dir('frontend') {
-                    bat 'npm run build'
+                    sh 'npm run build'
                 }
             }
         }
@@ -59,7 +59,7 @@ pipeline {
         stage('Start Backend') {
             steps {
                 dir('backend') {
-                    bat 'start /B node index.js'
+                    sh 'start /B node index.js'
                 }
             }
         }
