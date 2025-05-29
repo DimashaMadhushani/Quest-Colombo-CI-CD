@@ -51,9 +51,13 @@ This repository contains the Jenkins CI/CD pipeline configuration for the Quest 
 ##  Challenges & Fixes
 
 ⚙️ NodeJS auto-install failed in Jenkins → Installed manually & set path
+
 ⚙️ Missing SVG during frontend build → Removed broken image import
+
 ⚙️ start command failed on Linux → Replaced with nohup node index.js > backend.log 2>&1 &
+
 ⚙️ Git push conflicts → Resolved with --allow-unrelated-histories
+
 ⚙️ Duplicate stages {} block → Merged all stages under one block
 
 
