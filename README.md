@@ -1,6 +1,6 @@
 # 🚀 Quest Colombo CI/CD Pipeline
 
-This repository contains the Jenkins CI/CD pipeline configuration for the Quest Colombo full-stack web application. The application includes a React.js frontend, Node.js backend, and MySQL database.
+This repository contains the Jenkins CI/CD pipeline configuration for the Quest Colombo full-stack web application. The application includes a React.js frontend, PHP backend, and MySQL database.
 
 
 ##  Tech Stack
