@@ -6,7 +6,7 @@ This repository contains the Jenkins CI/CD pipeline configuration for the Quest 
 ##  Tech Stack
 
 - **Frontend**: React.js + Vite
-- **Backend**: Node.js + Express
+- **Backend**: PHP
 - **Database**: MySQL (managed via Laravel migrations)
 - **CI/CD**: Jenkins
 
